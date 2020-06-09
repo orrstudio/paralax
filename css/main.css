@@ -21,4 +21,14 @@ h2 {
 a {
   color: #2f88ed;
 }
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.contact__type {
+  min-width: 120px;
+}
 /*# sourceMappingURL=main.css.map */
