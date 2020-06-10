@@ -26,6 +26,10 @@ a {
   color: #2f88ed;
 }
 
+.description {
+  margin-top: 1em;
+}
+
 .contacts {
   margin-top: 2em;
 }
