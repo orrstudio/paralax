@@ -21,8 +21,16 @@ h2{
     margin-bottom: 1em;
 }
 
+h3 {
+    color: $primari-color;
+}
+
 a {
     color: $primari-color;
+}
+
+.contacts {
+    margin-top: 2em;
 }
 
 .contact {
@@ -30,5 +38,17 @@ a {
 
     &__type {
         min-width: 120px;
+    }
+}
+
+.experience {
+    display: flex;
+    margin-bottom: 2em;
+    &__date {
+        min-width: 185px;
+        margin-bottom: 1em;
+    }
+    &__name {
+        font-weight: bold;
     }
 }
