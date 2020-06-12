@@ -1,56 +1,101 @@
 /* Задаем параметры цветов темной и светлой темы (Светлая тема) */
 html {
   font-family: Roboto, sans-serif;
-  --primary-color: #2fed48;
+  --primary-color: #1b8d2a;
   --secondary-color: #333333;
-  --bg-color: #ffffff;
+  --bg-color: #fffccc;
 }
 /* Задаем параметры цветов темной и светлой темы (Темная тема) */
 html[data-theme='dark'] {
-  --primary-color: #2fed48;
-  --secondary-color: #ffffff;
+  --primary-color: #1b8d2a;
+  --secondary-color: #fffccc;
   --bg-color: #333333;
 }
-/* Цвет тела страницы */
+
+/* Задаем фоновый цвет меню */
+.topnav {
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 8px 10px;
+    /* text-transform:uppercase; */
+    text-decoration:none;
+    font-size: 16px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #1b8d2a;
+    /* color: black; */
+}
+
+/* Add an active class to highlight the current page */
+.active {
+    background-color: #1b8d2a;
+    /* color: white; */
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* Цвет фона страницы и поля по краям */
 body {
   background-color: var(--bg-color);
   margin: 0px;
 }
 
-.menudiv {
-    background-color: gray;
-    height: 30px;
-}
-
-.menuli {
-    display: inline-block;
-    padding: 3px 10px 0px 10px;
-    color: rgb(255, 233, 199);
-    font-size: 20px;
-    position: relative;
-}
-
-/* Цвет на всей странице*/
+/* Цвет текста на всей странице*/
 * {
   color: var(--secondary-color);
 }
 
+/* Расположение кнопки темы на странице. Растояния от правого и верхнего края */
+.theme-switch-wrapper {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+}
+
+.theme-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .theme-switch-wrapper em {
   margin-left: 10px;
 }
-
+/* Растояние между кнопкой и надписью темы */
+.theme-switch-wrapper .theme-switch__label {
+  margin-left: 5px;
+}
 /* Размеры переключателя темы. Высота ширина. */
 .theme-switch {
-  display: inline-block;
+  display: inlin-block;
   height: 19px;
   position: relative;
   width: 33px;
 }
 
+.theme-switch input {
+  display: none;
+}
+
 .slider {
-  background-color: rgb(0, 116, 19);
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -62,8 +107,8 @@ body {
 }
 /* размер и расположение переключателя кнопки темы */
 .slider:before {
-  background-color: rgb(255, 233, 199);
-  color: rgb(3, 73, 1);
+  background-color: var(--secondary-color);
+  color: var(--bg-color);
   content: "☼";
   height: 16.5px;
   width: 16.5px;
@@ -72,12 +117,12 @@ body {
   left: 1px;
   right: 1px;
   position: absolute;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: .8s;
+  transition: .8s;
 }
 
 input:checked + .slider {
-  background-color: var(--primary-color);
+  background-color: #fffccc;
 }
 /* Ход ползунка кнопки темы */
 input:checked + .slider:before {
