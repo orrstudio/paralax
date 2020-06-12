@@ -193,3 +193,21 @@ html.transition * {
 #myBtn:hover {
     background-color: #1b8d2a; /* Add a dark-grey background on hover */
 }
+
+section {
+width: 100%;
+height: 100vh;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+section.one {
+background-image: url('https://active-vision.ru/wa-data/public/blog/img/p17-1.jpg');
+}
+section.two {
+background-image: url('https://s-sd.ru/files/imfges-pol/files/imagine.jpg');
+}
+section.three {
+background-image: url('https://s-sd.ru/images/cms/data/misty-woods.jpg');
+}
