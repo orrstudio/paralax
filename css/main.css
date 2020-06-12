@@ -1,0 +1,123 @@
+/* Задаем параметры цветов темной и светлой темы (Светлая тема) */
+html {
+  font-family: Roboto, sans-serif;
+  --primary-color: #2f80ed;
+  --secondary-color: #333333;
+  --bg-color: #ffffff;
+}
+/* Задаем параметры цветов темной и светлой темы (Темная тема) */
+html[data-theme='dark'] {
+  --primary-color: #2f80ed;
+  --secondary-color: #ffffff;
+  --bg-color: #202020;
+}
+/* Цвет тела страницы */
+body {
+  background-color: var(--bg-color);
+  margin: 0px;
+}
+
+.menudiv {
+    background-color: gray;
+    height: 30px;
+}
+
+.menuli {
+    display: inline-block;
+    padding: 3px 10px 0px 10px;
+    color: rgb(255, 233, 199);
+    font-size: 20px;
+    position: relative;
+}
+
+/* Цвет на всей странице*/
+* {
+  color: var(--secondary-color);
+}
+
+}
+/* Расположение кнопки на странице. Растояния от правого и верхнего края */
+.theme-switch-wrapper {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.theme-switch-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+       -ms-flex-align: center;
+           align-items: center;
+}
+
+.theme-switch-wrapper em {
+  margin-left: 10px;
+}
+/* Растояние между кнопкой и надписью темы */
+.theme-switch-wrapper .theme-switch__label {
+  margin-left: 5px;
+}
+/* Размеры переключателя темы. Высота ширина. */
+.theme-switch {
+  display: inline-block;
+  height: 15px;
+  position: relative;
+  width: 30px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+/* размер и расположение переключателя кнопки темы */
+.slider:before {
+  background-color: #fff;
+  content: "";
+  height: 12px;
+  width: 12px;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  position: absolute;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+/* Ход ползунка кнопки темы */
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+          transform: translateX(15px); 
+}
+/* края округлитель кнопки темы */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+html.transition,
+html.transition * {
+  -webkit-transition: all 750ms !important;
+  transition: all 750ms !important;
+  -webkit-transition-delay: 0 !important;
+          transition-delay: 0 !important;
+}
