@@ -18,3 +18,13 @@ function transition() {
         document.documentElement.classList.remove('transition');
     }, 250)
 }
+
+// Переключение между добавлением и удалением «responsive» класса в topnav, когда пользователь нажимает на значок
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
