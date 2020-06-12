@@ -1,15 +1,15 @@
 /* Задаем параметры цветов темной и светлой темы (Светлая тема) */
 html {
   font-family: Roboto, sans-serif;
-  --primary-color: #2f80ed;
+  --primary-color: #2fed48;
   --secondary-color: #333333;
   --bg-color: #ffffff;
 }
 /* Задаем параметры цветов темной и светлой темы (Темная тема) */
 html[data-theme='dark'] {
-  --primary-color: #2f80ed;
+  --primary-color: #2fed48;
   --secondary-color: #ffffff;
-  --bg-color: #202020;
+  --bg-color: #333333;
 }
 /* Цвет тела страницы */
 body {
@@ -36,43 +36,21 @@ body {
 }
 
 }
-/* Расположение кнопки на странице. Растояния от правого и верхнего края */
-.theme-switch-wrapper {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-
-.theme-switch-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-       -ms-flex-align: center;
-           align-items: center;
-}
 
 .theme-switch-wrapper em {
   margin-left: 10px;
 }
-/* Растояние между кнопкой и надписью темы */
-.theme-switch-wrapper .theme-switch__label {
-  margin-left: 5px;
-}
+
 /* Размеры переключателя темы. Высота ширина. */
 .theme-switch {
   display: inline-block;
-  height: 15px;
+  height: 19px;
   position: relative;
-  width: 30px;
-}
-
-.theme-switch input {
-  display: none;
+  width: 33px;
 }
 
 .slider {
-  background-color: #ccc;
+  background-color: rgb(0, 116, 19);
   bottom: 0;
   cursor: pointer;
   left: 0;
@@ -84,14 +62,15 @@ body {
 }
 /* размер и расположение переключателя кнопки темы */
 .slider:before {
-  background-color: #fff;
-  content: "";
-  height: 12px;
-  width: 12px;
-  top: 2px;
-  bottom: 2px;
-  left: 2px;
-  right: 2px;
+  background-color: rgb(255, 233, 199);
+  color: rgb(3, 73, 1);
+  content: "☼";
+  height: 16.5px;
+  width: 16.5px;
+  top: 1px;
+  bottom: 1px;
+  left: 1px;
+  right: 1px;
   position: absolute;
   -webkit-transition: .4s;
   transition: .4s;
