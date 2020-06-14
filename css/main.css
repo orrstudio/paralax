@@ -3,12 +3,12 @@ html {
   font-family: Roboto, sans-serif;
   --primary-color: #1b8d2a;
   --secondary-color: #333333;
-  --bg-color: #fffccc;
+  --bg-color: rgb(240,240,240);
 }
 /* Задаем параметры цветов темной и светлой темы (Темная тема) */
 html[data-theme='dark'] {
   --primary-color: #1b8d2a;
-  --secondary-color: #fffccc;
+  --secondary-color: rgb(240,240,240);
   --bg-color: #333333;
 }
 
@@ -22,7 +22,7 @@ html[data-theme='dark'] {
 .topnav a {
     float: left;
     display: block;
-    color: #f2f2f2;
+    color: rgb(240,240,240);
     text-align: center;
     padding: 8px 10px;
     /* text-transform:uppercase; */
@@ -150,7 +150,7 @@ body {
 }
 
 input:checked + .slider {
-  background-color: #fffccc;
+  background-color: rgb(240,240,240);
 }
 /* Ход ползунка кнопки темы */
 input:checked + .slider:before {
@@ -183,7 +183,7 @@ html.transition * {
     border: none; /* Remove borders */
     outline: none; /* Remove outline */
     background-color: #000; /* Set a background color */
-    color: #fffccc; /* Text color */
+    color: rgb(240,240,240); /* Text color */
     cursor: pointer; /* Add a mouse pointer on hover */
     padding: 10px; /* Some padding */
     border-radius: 10px; /* Rounded corners */
