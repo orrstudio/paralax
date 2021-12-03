@@ -11,9 +11,10 @@
 <!-- STYLES --><style>
 
 /* BODY STYLE */
-			p {	font-family: 'Avenir', 'Arial', sans-serif;}
+			p {	font-family: 'Arial';}
 			a {	color: white; font-weight: bold;}
 		body {	word-wrap: break-word;
+				font-family: 'Arial';
 				background-color: #005059;}
 	     strong {	font-size: 80px;}
 
@@ -22,7 +23,7 @@
 /* TABLES STYLE */
 		table {	color: white;
 				font-size: 60px;
-				font-family: 'Avenir', 'Arial', sans-serif;
+				font-family: 'Arial';
 				text-align: left;
 				word-wrap: break-word;
 				border-collapse: collapse;
@@ -30,12 +31,16 @@
 				margin: auto;
 				width: 96%;}
 	table th {	border: 2px solid white;
+				font-family: 'Arial';
 				color: #E4E4E4 ;
+				font-size: 70px;
 				padding: .6em .5em .6em .5em;
 				border-bottom: 2px solid white;
 				background-color: #2A2A2A;
 				display: block;}
 	table td {	border: 1px solid white;
+				font-family: 'Arial';
+				font-size: 45px;
  	   			color:   #FDFFCE;
 				padding: .6em .5em .6em .5em;
 				border-bottom: 2px solid white;
@@ -374,12 +379,12 @@ document.title = "VII - PAZAR ESMASI";
 <!-- END BUTTONS DIV -->
 
 <!-- WEEK NAME DIV's -->
-<div align="center" style="color: grey; display:block; padding: 0em 0.5em 0em 0.5em; font-size: 35px; font-family: FontAwesome;"><i class="fa fa-hand-o-up"></i></i>  HAFTANIN GÜNÜNÜ SEÇİN <i class="fa fa-cogs"></i></div>	
+<div align="center" style="color: grey; display:block; padding: 0em 0.5em 0em 0.5em; font-size: 35px; font-family: Arial;"><i class="fa fa-hand-o-up"></i></i>  HAFTANIN GÜNÜNÜ SEÇİN <i class="fa fa-cogs"></i></div>	
 
 
 <!-- ANLAM ve AYETLER DIV's -->
-<div align="center" style="display:bloc; color: grey; text-align: right; padding: 1em 0.5em 1em 0.5em; font-size: 35px; font-family: FontAwesome;><i class="fa fa-cogs"></i> ANLAM ve AYETLERİ <i class="fa fa-hand-o-right"></i> 
-<button type="submit" id="ButtonId" onclick="changeColor();" class="btn"  style="text-align: center; width: 150px; padding: 2px 0; border: solid 2px #fffdcf; border-radius: 10px; font: 50px Arial, Helvetica, sans-serif; font-weight: bold; color: #fffdcf; background-color: green; box-shadow: 0px 0px 2px #fffdcf, inset 0px 0px 1px white; outline: none;">ON</button>
+<div align="center" style="display:bloc; color: grey; text-align: right; padding: 1em 0.5em 1em 0.5em; font-size: 35px; font-family: Arial;"><i class="fa fa-cogs"></i> ESMAÜL HÜSNA  ANLAMI & AYETLERİ <i class="fa fa-hand-o-right"></i> 
+<button type="submit" id="ButtonId" onclick="changeColor();" class="btn"  style="font-size: 50px; font-family: Arial; text-align: center; width: 150px; padding: 2px 0; border: solid 2px #fffdcf; border-radius: 10px; font-weight: bold; color: #fffdcf; background-color: green; box-shadow: 0px 0px 2px #fffdcf, inset 0px 0px 1px white; outline: none;">ON</button>
 <script>	$('.btn').click(function(){$(".block_with_text").fadeToggle(500); $(this).text(function(i, text){return text === "ON" ? "OFF" : "ON";}); }); 
 var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var col = document.getElementById("ButtonId"); if( colorIndex >= colors.length ) { colorIndex = 0; }   col.style.backgroundColor = colors[colorIndex]; colorIndex++; }</script>
 </div>
@@ -388,11 +393,11 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <!-- NOT CHANGE DIV -->
 <!------------------------------------------------------->
 <div>
-<div  class="block_with_text" style="display:block; color: #fffdcf; text-align: center; padding: 0em 0.5em 1em 0.5em; font-size: 45px; font-family: FontAwesome;">
+<div  class="block_with_text" style="display:block; color: #fffdcf; text-align: center; padding: 0em 0.5em 1em 0.5em; font-size: 45px; font-family: Arial;">
 "İlgili esmalar çekilmeden önce âyet okunur."</div>
 <!------------------------------------------------------->
 <table align="center" width=100%>
-<tr><th class="block_with_text"   style="display: block;">	Bu esma için ayet yok</th></tr>
+<tr><th class="block_with_text"   style="display: block; font-size: 40px;">	Bu esma için ayet yok</th></tr>
 <tr><td><strong>										El İlâh - 269</strong><input style="display: none" id="Allah" type="checkbox" onclick=toggleCheckBox1()>
 <label for="Allah" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td  class="block_with_text"  style="display: block;">	ALLAH</td></tr></table>
