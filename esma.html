@@ -11,12 +11,9 @@
 <!-- STYLES --><style>
 
 /* BODY STYLE */
-			p {	font-size: 45px;
-				font-family: 'Avenir', 'Arial', sans-serif;}
+			p {	font-family: 'Avenir', 'Arial', sans-serif;}
 			a {	color: white; font-weight: bold;}
-		body {	color: white;
-				font-size: 45px;
-				word-wrap: break-word;
+		body {	word-wrap: break-word;
 				background-color: #005059;}
 	     strong {	font-size: 80px;}
 
@@ -24,28 +21,23 @@
 
 /* TABLES STYLE */
 		table {	color: white;
-				font-size: 50px;
+				font-size: 60px;
 				font-family: 'Avenir', 'Arial', sans-serif;
+				text-align: left;
 				word-wrap: break-word;
 				border-collapse: collapse;
 				background-color: #01171C;
 				margin: auto;
 				width: 96%;}
-	table th {	border: 1px solid white;
+	table th {	border: 2px solid white;
 				color: #E4E4E4 ;
- 	   			font-size: 50px;
-				text-align: left;
-				padding: .4em 1em .4em 1em;
-				font-family: 'Avenir', 'Arial', sans-serif;
+				padding: .6em .5em .6em .5em;
 				border-bottom: 2px solid white;
 				background-color: #2A2A2A;
 				display: block;}
 	table td {	border: 1px solid white;
- 	   			font-size: 50px;
  	   			color:   #FDFFCE;
-				text-align: left;
-				padding: .4em 1em .4em 1em;
-				font-family: 'Avenir', 'Arial', sans-serif;
+				padding: .6em .5em .6em .5em;
 				border-bottom: 2px solid white;
 				background-color: #013231;}
 /* END TABLES STYLE */
@@ -382,11 +374,11 @@ document.title = "VII - PAZAR ESMASI";
 <!-- END BUTTONS DIV -->
 
 <!-- WEEK NAME DIV's -->
-<div align="center" style="color: grey; display:block; padding: 0em 0.5em 0em 0.5em;"><i class="fa fa-hand-o-up"></i></i>  HAFTANIN GÜNÜNÜ SEÇİN <i class="fa fa-cogs"></i></div>	
+<div align="center" style="color: grey; display:block; padding: 0em 0.5em 0em 0.5em; font-size: 35px; font-family: FontAwesome;"><i class="fa fa-hand-o-up"></i></i>  HAFTANIN GÜNÜNÜ SEÇİN <i class="fa fa-cogs"></i></div>	
 
 
 <!-- ANLAM ve AYETLER DIV's -->
-<div align="center" style="display:bloc-inherit; color: grey; vertical-align: middle; text-align: right; padding: 1em 0.5em 0.5em 0.5em; font-size: 40px; font-family: 'Avenir', 'Arial', sans-serif; word-wrap: break-word;"><i class="fa fa-cogs"></i> ANLAM ve AYETLERİ <i class="fa fa-hand-o-right"></i> 
+<div align="center" style="display:bloc; color: grey; text-align: right; padding: 1em 0.5em 1em 0.5em; font-size: 35px; font-family: FontAwesome;><i class="fa fa-cogs"></i> ANLAM ve AYETLERİ <i class="fa fa-hand-o-right"></i> 
 <button type="submit" id="ButtonId" onclick="changeColor();" class="btn"  style="text-align: center; width: 150px; padding: 2px 0; border: solid 2px #fffdcf; border-radius: 10px; font: 50px Arial, Helvetica, sans-serif; font-weight: bold; color: #fffdcf; background-color: green; box-shadow: 0px 0px 2px #fffdcf, inset 0px 0px 1px white; outline: none;">ON</button>
 <script>	$('.btn').click(function(){$(".block_with_text").fadeToggle(500); $(this).text(function(i, text){return text === "ON" ? "OFF" : "ON";}); }); 
 var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var col = document.getElementById("ButtonId"); if( colorIndex >= colors.length ) { colorIndex = 0; }   col.style.backgroundColor = colors[colorIndex]; colorIndex++; }</script>
@@ -396,8 +388,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <!-- NOT CHANGE DIV -->
 <!------------------------------------------------------->
 <div>
-<div style="padding: 1em 0 0 0;"></div>
-<div  class="block_with_text" style="display:block; color: #fffdcf; text-align: center; padding: 0em 0.5em 0.5em 0.5em; word-wrap: break-word;">
+<div  class="block_with_text" style="display:block; color: #fffdcf; text-align: center; padding: 0em 0.5em 1em 0.5em; font-size: 45px; font-family: FontAwesome;">
 "İlgili esmalar çekilmeden önce âyet okunur."</div>
 <!------------------------------------------------------->
 <table align="center" width=100%>
@@ -405,7 +396,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <tr><td><strong>										El İlâh - 269</strong><input style="display: none" id="Allah" type="checkbox" onclick=toggleCheckBox1()>
 <label for="Allah" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td  class="block_with_text"  style="display: block;">	ALLAH</td></tr></table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 
 <table align="center" width=100%>
 <tr><th class="block_with_text"  id="tableth" style="display: block;">
@@ -431,7 +422,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <tr><td><strong>										El Masîr - 535</strong><input style="display: none" id="Masir" type="checkbox">
 <label for="Masir" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Seyreden, hareket eden</td></tr></table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <!-- END NOT CHANGE DIV --> </div>
 
 <!--********************************************-->
@@ -458,7 +449,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <label for="Vedûd" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Seven, sevilen</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 <!------------------------------------------------------->
@@ -481,7 +472,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <label for="Semîu" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	İşiten</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 <!------------------------------------------------------->
@@ -504,7 +495,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <label for="Muhyî" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Hayat veren</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 <!------------------------------------------------------->
@@ -536,7 +527,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <label for="Mukaddim" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Öncelik taşıyan, önce olan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 <!------------------------------------------------------->
@@ -585,7 +576,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <label for="Muktedir" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	İktidar sahibi</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -604,7 +595,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <label for="Kâdir" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Herşeye gücü yeten</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -635,7 +626,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <label for="Samed" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Dertlere derman</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -654,7 +645,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <label for="Ehad" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Eşi olmayan (tek)</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -670,7 +661,7 @@ var colors = ["red", "green"]; var colorIndex = 0; function changeColor() {var c
 <label for="Vâhid" style="font-family: FontAwesome; font-size: 70px; color: white;"></label></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Tek olan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -701,7 +692,7 @@ Ve iz kâle ibrâhîmu rabbic’al hâzâ beleden âminen verzuk ehlehu mines se
 <tr><td><strong>										El Vâlî - 285</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	İdare eden</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 41/FUSSİLET-<a data-from-md title='https://www.mihr.com/Kuran/Meal/41/fussilet/12' href='https://www.mihr.com/Kuran/Meal/41/fussilet/12' target="_blank">12</a>:</th></tr>
@@ -710,7 +701,7 @@ Fe kadâhunne seb’a semâvâtin fî yevmeyni ve evhâ fî kulli semâin emreh�
 <tr><td><strong>										El Bâtın - 309</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Gizli olan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 39/ZUMER-<a data-from-md title='https://www.mihr.com/Kuran/Meal/39/zumer/17' href='https://www.mihr.com/Kuran/Meal/39/zumer/17' target="_blank">17</a>:</th></tr>
@@ -723,7 +714,7 @@ Vellezînectenebût tâgûte en ya’budûhâ ve enâbû ilâllâhi lehumul buş
 <tr><td><strong>										El Vâsiu - 453</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Geniş olan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 16/NAHL-<a data-from-md title='https://www.mihr.com/Kuran/Meal/16/nahl/98' href='https://www.mihr.com/Kuran/Meal/16/nahl/98' target="_blank">98</a>:</th></tr>
@@ -735,7 +726,7 @@ Fe izâ kara’tel kur’âne festeız billâhi mineş şeytânir racîm(racîmi
 <tr><td><strong>										Ez Zâhir - 1367</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Görülen, açıkta olan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 17/İSRA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/17/isra/80' href='https://www.mihr.com/Kuran/Meal/17/isra/80' target="_blank">80</a>:</th></tr>
@@ -748,7 +739,7 @@ Ve kul rabbi edhılnî mudhale sıdkın ve ahricnî muhrece sıdkın vec’al l�
 <tr><td><strong>										El Âhir - 1061</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Sonraki (sonu olmayan)</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 19/MERYEM-<a data-from-md title='https://www.mihr.com/Kuran/Meal/19/meryem/17' href='https://www.mihr.com/Kuran/Meal/19/meryem/17' target="_blank">17</a>:</th></tr>
@@ -774,7 +765,7 @@ Fettehazet min dûnihim hicâben fe erselnâ ileyhâ rûhanâ fe temessele lehâ
 <tr><td><strong>										El Evvel - 356</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Evvelki (başlangıcı olmayan)</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 21/ENBİYA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/21/enbiya/83' href='https://www.mihr.com/Kuran/Meal/21/enbiya/83' target="_blank">83</a>:</th></tr>
@@ -787,7 +778,7 @@ Ve eyyûbe iz nâdâ rabbehû ennî messeniyed durru ve ente erhamur râhimîn(r
 <tr><td><strong>										El Muahhir - 1782</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Tehir eden, geriye alan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 21/ENBİYA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/21/enbiya/89' href='https://www.mihr.com/Kuran/Meal/21/enbiya/89' target="_blank">89</a>:</th></tr>
@@ -800,7 +791,7 @@ Ve zekeriyyâ iz nâdâ rabbehu rabbi lâ tezernî ferden ve ente hayrul vâris�
 <tr><td><strong>										Er Rauf - 433</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Refet (ni’met veren)</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 21/ENBİYA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/21/enbiya/92' href='https://www.mihr.com/Kuran/Meal/21/enbiya/92' target="_blank">92</a>:</th></tr>
@@ -813,7 +804,7 @@ Ve zekeriyyâ iz nâdâ rabbehu rabbi lâ tezernî ferden ve ente hayrul vâris�
 <tr><td><strong>										El Afuvv - 375</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Affeden</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 21/ENBİYA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/21/enbiya/107' href='https://www.mihr.com/Kuran/Meal/21/enbiya/107' target="_blank">107</a>:</th></tr>
@@ -839,7 +830,7 @@ Kâle rabbıhkum bil hakk(hakkı), ve rabbuner rahmânul musteânu alâ mâ tas�
 <tr><td><strong>										Et Tevvâb - 689</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Tövbeleri kabul eden</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 22/HAC-<a data-from-md title='https://www.mihr.com/Kuran/Meal/22/hacc/68' href='https://www.mihr.com/Kuran/Meal/22/hacc/68' target="_blank">68</a>:</th></tr>
@@ -852,7 +843,7 @@ Ve in câdelûke fe kulillâhu a’lemu bimâ ta’melûn(ta’melûne).</th></t
 <tr><td><strong>										El Berr - 543</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Kul lehine davranan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/26' href='https://www.mihr.com/Kuran/Meal/23/muminun/26' target="_blank">26</a>:</th></tr>
@@ -865,7 +856,7 @@ Kâle rabbinsurnî bimâ kezzebûn(kezzebûni).</th></tr>
 <tr><td><strong>										El Muteâlî - 824</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Herşeyden üstün olan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 39/ZUMER-<a data-from-md title='https://www.mihr.com/Kuran/Meal/39/zumer/19' href='https://www.mihr.com/Kuran/Meal/39/zumer/19' target="_blank">19</a>:</th></tr>
@@ -880,7 +871,7 @@ E fe men hakka aleyhi kelimetul azâb(azâbi), e fe ente tunkızu men fîn nâr(
 <tr><td><strong>										Er Rakîb - 534</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Hıfzeden, saklayan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/29' href='https://www.mihr.com/Kuran/Meal/23/muminun/29' target="_blank">29</a>:</th></tr>
@@ -906,7 +897,7 @@ Ve kul rabbi enzilnî munzelen mubâreken ve ente hayrul munzilîn(munzilîne).<
 <tr><td><strong>										El Ganî - 1258</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Müstağni</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/93' href='https://www.mihr.com/Kuran/Meal/23/muminun/93' target="_blank">93</a>:</th></tr>
@@ -919,7 +910,7 @@ Kul rabbi immâ turiyennî mâ yûadûn(yûadûne).</th></tr>
 <tr><td><strong>										El Câmiu - 394</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Biraraya toplayan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/94' href='https://www.mihr.com/Kuran/Meal/23/muminun/94' target="_blank">94</a>:</th></tr>
@@ -930,7 +921,7 @@ Rabbi fe lâ tec’alnî fîl kavmiz zâlimîn(zâlimîne).</th></tr>
 <tr><td><strong>										El Muîd - 335</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Aslına iade eden</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/97' href='https://www.mihr.com/Kuran/Meal/23/muminun/97' target="_blank">97</a>:</th></tr>
@@ -939,7 +930,7 @@ Ve kul rabbi eûzu bike min hemezatiş şeyâtîn(şeyâtîni).</th></tr>
 <tr><td><strong>										El Mubdiu - 208</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Başlangıcı olmayan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/98' href='https://www.mihr.com/Kuran/Meal/23/muminun/98' target="_blank">98</a>:</th></tr>
@@ -969,7 +960,7 @@ Ve kul rabbigfir verham ve ente hayrur râhımîn(râhımîne).</th></tr>
 <tr><td><strong>										El Hâdî - 242</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Hidayete erdiren</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 25/FURKAN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/25/furkan/6' href='https://www.mihr.com/Kuran/Meal/25/furkan/6' target="_blank">6</a>:</th></tr>
@@ -982,7 +973,7 @@ Kul enzelehullezî ya’lemus sırre fîs semâvâti vel ard(ardı), innehu kân
 <tr><td><strong>										En Nûr - 458</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Nur olan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 26/ŞUARA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/26/suara/62' href='https://www.mihr.com/Kuran/Meal/26/suara/62' target="_blank">62</a>:</th></tr>
@@ -995,7 +986,7 @@ Kâle kellâ, inne maiye rabbî seyehdîn(seyehdîni).</th></tr>
 <tr><td><strong>										En Nâfiu - 438</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Fayda sağlayan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 26/ŞUARA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/26/suara/83' href='https://www.mihr.com/Kuran/Meal/26/suara/83' target="_blank">83</a>:</th></tr>
@@ -1008,7 +999,7 @@ Rabbi heb lî hukmen ve elhıknî bis sâlihîn(sâlihîne).</th></tr>
 <tr><td><strong>										Ed Dârr - 1535</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Yurt</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text" style="display: block;">
 26/ŞUARA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/26/suara/85' href='https://www.mihr.com/Kuran/Meal/26/suara/85' target="_blank">85</a>:</th></tr>
@@ -1019,7 +1010,7 @@ Vec’alnî min vereseti cennetin naîm(naîmi).</th></tr>
 <tr><td><strong>										El Hayy - 100</strong></td></tr>
 <tr><td class="block_with_text"  style="display: block;">	Sonsuz hayatta olan</td></tr>
 </table>
-<p  class="block_with_text"  style="display: block;"></p>
+<p  class="block_with_text"  style="display: block;"><br/></p>
 <table align="center" width=100%>
 <tr><th class="block_with_text"   style="display: block;">	Bu esma için ayet yok</th></tr>
 <tr><td><strong>										Eş Şafi - 884</strong></td></tr>
