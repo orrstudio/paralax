@@ -64,7 +64,7 @@ input[type=checkbox] + label:before {content: "\1f497";
 /* END CHECKBOX STYLE*/
 
 /*<!-- BUTTONS STYLE -->*/
-.PlayButton {		display:block-inherit;
+.PlayButton {		display:inline-block;
 					height:80px;
 					font-family:FontAwesome;
 					border-radius: 2em;
@@ -77,14 +77,13 @@ input[type=checkbox] + label:before {content: "\1f497";
 					border: 2px solid LightYellow; 
 					border-radius: 20%; /*закругленные углы*/
 					color: LightYellow;
-					width: 13%;
-					padding: 1px 0; /* Some padding */
-					float: none; /* Float the buttons side by side */
+					width: 12%;
+					height: 100px;
 					align-items: center;
-					font-size: 95px;
+					font-size: 80px;
 					font-weight: bold;
 					text-align: center; /*выравнивание текста*/
-					margin: 0px 1px 20px 1px;  /*расположение от верха, правой стооны, низа и левой стооны*/}
+					margin: 0px 0px 20px 0px;  /*расположение от верха, правой стооны, низа и левой стооны*/}
 .btn-group button:hover {background-color: LightYellow; border: 2px solid LightYellow; color: SeaGreen; }
 /*<!-- END BUTTONS STYLE -->*/
 
@@ -110,11 +109,33 @@ input[type=checkbox] + label:before {content: "\1f497";
 	VII - PAZAR</div>		
 <!-- END WEEK NAME DIV's -->
 
-<div align="center" style="color: grey; display:block; text-align: center; padding: 0em 0.5em 0em 0.5em; font-size: 50px; font-family: Arial;"><i class="fa fa-hand-o-down"></i></i>  HAFTANIN GÜNÜNÜ SEÇİN <i class="fa fa-cogs"></i></div>	
+<div id="MenuButton" style="color: grey; display:block; text-align: right; padding: 0.5em 0.5em 0em 0.5em; font-size: 50px; font-family: Arial;" class="btn-group" align="center">
+<i class="fa fa-cogs"></i>  HAFTANIN GÜNÜ <i class="fa fa-hand-o-right"></i> 
+<button onclick="deleteThis(this)"><i class="fa fa-bars"></i></button>
+<script>var deleteThis = function(elem){
+	$("[class='chekboxInput']:checked").prop("checked", false)
+        document.getElementById('MenuButton').style.display = "none";
+        document.getElementById('myDIV0').style.display = "block";
+        document.getElementById('myDIV1').style.display = "none";
+        document.getElementById('myDIV2').style.display = "none";
+        document.getElementById('myDIV3').style.display = "none";
+        document.getElementById('myDIV4').style.display = "none";
+        document.getElementById('myDIV5').style.display = "none";
+        document.getElementById('myDIV6').style.display = "none";
+        document.getElementById('myDIV7').style.display = "none";
+        document.getElementById('myDIV11').style.display = "none";
+        document.getElementById('myDIV22').style.display = "none";
+        document.getElementById('myDIV33').style.display = "none";
+        document.getElementById('myDIV44').style.display = "none";
+        document.getElementById('myDIV55').style.display = "none";
+        document.getElementById('myDIV66').style.display = "none";
+        document.getElementById('myDIV77').style.display = "none";
+        document.getElementById('GroupButtons').style.display = "block";}</script>
+</div>  
 
 <!-- BUTTONS DIV -->
-<div class="btn-group" align="center">
- 
+<div id="GroupButtons" style="display:none; padding: 0.5em 0em 0em 0em; font-size: 50px; font-family: Arial;" class="btn-group" align="center">
+
  <!-- BUTTON I & script -->
 <button onclick="myFunction1()">I</button>
 <script>function myFunction1() {var 
@@ -149,8 +170,11 @@ x4.style.display = 'none';
 x5.style.display = 'none';
 x6.style.display = 'none';
 x7.style.display = 'none'; 
+} else {x0.style.display = 'none'; x1.style.display = 'block'; xx1.style.display = 'block';}
 document.title = "I - PAZARTESİ ESMASI";
-} else {x0.style.display = 'none'; x1.style.display = 'block'; xx1.style.display = 'block'; document.title = "I - PAZARTESİ ESMASI";}}</script>
+document.getElementById('GroupButtons').style.display = "none";
+document.getElementById('MenuButton').style.display = "block";}
+</script>
 <!-- END BUTTON I & script -->
 
 <!-- BUTTON II & script -->
@@ -187,8 +211,11 @@ x4.style.display = 'none';
 x5.style.display = 'none';
 x6.style.display = 'none';
 x7.style.display = 'none';
+} else {x0.style.display = 'none'; x2.style.display = 'block'; xx2.style.display = 'block';}
 document.title = "II - SALI ESMASI";
-} else {x0.style.display = 'none'; x2.style.display = 'block'; xx2.style.display = 'block'; document.title = "II - SALI ESMASI";}}</script>
+document.getElementById('GroupButtons').style.display = "none";
+document.getElementById('MenuButton').style.display = "block";}
+</script>
 <!-- END BUTTON II & script -->
 
 <!-- BUTTON III & script -->
@@ -225,8 +252,11 @@ x4.style.display = 'none';
 x5.style.display = 'none';
 x6.style.display = 'none';
 x7.style.display = 'none';
+} else {x0.style.display = 'none'; x3.style.display = 'block'; xx3.style.display = 'block';}
 document.title = "III - ÇARŞAMBA ESMASI";
-} else {x0.style.display = 'none'; x3.style.display = 'block'; xx3.style.display = 'block'; document.title = "III - ÇARŞAMBA ESMASI";}}</script>
+document.getElementById('GroupButtons').style.display = "none";
+document.getElementById('MenuButton').style.display = "block";}
+</script>
 <!-- END BUTTON III & script -->
 
 <!-- BUTTON IV & script -->
@@ -263,8 +293,11 @@ x3.style.display = 'none';
 x5.style.display = 'none';
 x6.style.display = 'none';
 x7.style.display = 'none';
+} else {x0.style.display = 'none'; x4.style.display = 'block'; xx4.style.display = 'block';}
 document.title = "IV - PERŞEMBE ESMASI";
-} else {x0.style.display = 'none'; x4.style.display = 'block'; xx4.style.display = 'block'; document.title = "IV - PERŞEMBE ESMASI";}}</script>
+document.getElementById('GroupButtons').style.display = "none";
+document.getElementById('MenuButton').style.display = "block";}
+</script>
 <!-- END BUTTON IV & script -->
 
 <!-- BUTTON V & script -->
@@ -301,8 +334,11 @@ x3.style.display = 'none';
 x4.style.display = 'none';
 x6.style.display = 'none';
 x7.style.display = 'none';
+} else {x0.style.display = 'none'; x5.style.display = 'block'; xx5.style.display = 'block';}
 document.title = "V - CUMA ESMASI";
-} else {x0.style.display = 'none'; x5.style.display = 'block'; xx5.style.display = 'block'; document.title = "V - CUMA ESMASI";}}</script>
+document.getElementById('GroupButtons').style.display = "none";
+document.getElementById('MenuButton').style.display = "block";}
+</script>
 <!-- END BUTTON V & script -->
 
 <!-- BUTTON VI & script -->
@@ -339,12 +375,15 @@ x3.style.display = 'none';
 x4.style.display = 'none';
 x5.style.display = 'none';
 x7.style.display = 'none';
+} else {x0.style.display = 'none'; x6.style.display = 'block'; xx6.style.display = 'block';}
 document.title = "VI - CUMARTESİ ESMASI";
-} else {x0.style.display = 'none'; x6.style.display = 'block'; xx6.style.display = 'block'; document.title = "VI - CUMARTESİ ESMASI";}}</script>
+document.getElementById('GroupButtons').style.display = "none";
+document.getElementById('MenuButton').style.display = "block";}
+</script>
 <!-- END BUTTON VI & script -->
 
 <!-- BUTTON VII & script -->
-<button id="b7" onclick="myFunction7()">VII</button>
+<button onclick="myFunction7()">VII</button>
 <script>function myFunction7() {var 
 xx1 = document.getElementById('myDIV11'); 
 xx2 = document.getElementById('myDIV22');
@@ -377,15 +416,18 @@ x3.style.display = 'none';
 x4.style.display = 'none';
 x5.style.display = 'none';
 x6.style.display = 'none'; 
+} else {x0.style.display = 'none'; x7.style.display = 'block'; xx7.style.display = 'block';}
 document.title = "VII - PAZAR ESMASI";
-} else {x0.style.display = 'none'; x7.style.display = 'block'; xx7.style.display = 'block'; document.title = "VII - PAZAR ESMASI";}}</script>
+document.getElementById('GroupButtons').style.display = "none";
+document.getElementById('MenuButton').style.display = "block";}
+</script>
 <!-- END BUTTON VII & script -->
 </div> 
 <!-- END BUTTONS DIV -->
 
 <!-- ANLAM ve AYETLER DIV's -->
-<div align="center" style="color: grey; display:block; text-align: right; padding: 0.5em 0.5em 0.5em 0.5em; font-size: 50px; font-family: Arial;"><i class="fa fa-cogs"></i> ESMA AYETİ & ANLAMI <i class="fa fa-hand-o-right"></i>
-<button type="submit" id="ButtonId" onclick="changeColor();" class="btn"  style="font-size: 60px; font-family: Arial; text-align: center; width: 200px; height: 90px;  border: solid 2px LightYellow; border-radius: 10px; font-weight: bold; color: LightYellow; background-color: red;">OFF</button>
+<div align="center" style="color: grey; display:block; text-align: right; padding: 0.2em 0.5em 0.2em 0.5em; font-size: 50px; font-family: Arial;"><i class="fa fa-cogs"></i> ESMA AYETİ & ANLAMI <i class="fa fa-hand-o-right"></i>
+<button type="submit" id="ButtonId" onclick="changeColor();" class="btn"  style="font-size: 60px; font-family: Arial; text-align: center; width: 160px; height: 90px;  border: solid 2px LightYellow; border-radius: 20px; font-weight: bold; color: LightYellow; background-color: red;">OFF</button>
 <script>	$('.btn').click(function(){$(".block_with_text").fadeToggle(500); $(this).text(function(i, text){return text === "OFF" ? "ON" : "OFF";}); }); 
 var colors = ["SeaGreen", "red"]; var colorIndex = 0; function changeColor() {var col = document.getElementById("ButtonId"); if( colorIndex >= colors.length ) { colorIndex = 0; }   col.style.backgroundColor = colors[colorIndex]; colorIndex++; }</script>
 </div>
@@ -393,14 +435,14 @@ var colors = ["SeaGreen", "red"]; var colorIndex = 0; function changeColor() {va
 
 <!-- NOT CHANGE DIV -->
 <!------------------------------------------------------->
-<div style="display:inline-block; color: LightYellow; text-align: center; font-size: 48px; font-family: Arial; padding: 0.5em 0.5em 1em 0.5em; ">
+<div style="display:inline-block; color: LightYellow; text-align: center; font-size: 48px; font-family: Arial; padding: 0.5em 0.5em 0.5em 0.5em; ">
 EÛZUBİLLÂHİMİNEŞŞEYTÂNİRRACÎM<br/>
 BİSMİLLÂHİRRAHMÂNİRRAHÎM</div>
 <!------------------------------------------------------->
 <div align="center" style="display:block;">
 <table align="center" width=100%>
 <tr><td><strong><span style="font-size: 85px;">
-Allah (El İlâh) - 269</span></strong><input id="Heart" style="display: none" type="checkbox">
+Allah (El İlâh) - 269</span></strong><input id="Heart" style="display: none" type="checkbox" class="chekboxInput">
 <label for="Heart"></label></td></tr></table></div>
 
 <p  class="block_with_text" style="display:none;"><br/></p>
@@ -431,7 +473,7 @@ Allah (El İlâh) - 269</span></strong><input id="Heart" style="display: none" t
 39/ZUMER-19</a>: E fe men hakka aleyhi kelimetul azâb(azâbi), e fe ente tunkızu men fîn nâr(nâri).<br/></th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Masîr - 535</strong><input style="display: none" id="Masir" type="checkbox">
+El Masîr - 535</strong><input style="display: none" id="Masir" type="checkbox" class="chekboxInput">
 <label for="Masir"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Seyreden, hareket eden</td></tr></table>
@@ -453,17 +495,17 @@ Seyreden, hareket eden</td></tr></table>
 5/MAİDE-97</a>: Cealallâhul ka’betel beytel harâme kıyâmen lin nâsi veş şehral harâme vel hedye vel kalâid(kalâide), zâlike li ta’lemû ennellâhe ya’lemu mâ fîs semâvâti ve mâ fîl ardı ve ennallâhe bikulli şey’in alîm(alîmun).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Mugnî - 1337</strong><input style="display: none" id="Mugnî" type="checkbox">
+El Mugnî - 1337</strong><input style="display: none" id="Mugnî" type="checkbox" class="chekboxInput">
 <label for="Mugnî"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Gani kılan, zengin eden</td></tr>
 <tr><td><strong>
-Es Sabûr - 519</strong><input style="display: none" id="Sabûr" type="checkbox">
+Es Sabûr - 519</strong><input style="display: none" id="Sabûr" type="checkbox" class="chekboxInput">
 <label for="Sabûr"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Sabır sahibi</td></tr>
 <tr><td><strong>
-El Vedûd - 372</strong><input style="display: none" id="Vedûd" type="checkbox">
+El Vedûd - 372</strong><input style="display: none" id="Vedûd" type="checkbox" class="chekboxInput">
 <label for="Vedûd"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Seven, sevilen</td></tr>
@@ -485,12 +527,12 @@ Seven, sevilen</td></tr>
 19/MERYEM-20</a>: Kâlet ennâ yekûnu lî gulâmun ve lem yemsesnî beşerun ve lem eku bagıyyâ(bagıyyen).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Vehhâb - 218</strong><input style="display: none" id="Vehhâb" type="checkbox">
+El Vehhâb - 218</strong><input style="display: none" id="Vehhâb" type="checkbox" class="chekboxInput">
 <label for="Vehhâb"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hibe eden, karşılıksız veren</td></tr>
 <tr><td><strong>
-Es Semîu - 351</strong><input style="display: none" id="Semîu" type="checkbox">
+Es Semîu - 351</strong><input style="display: none" id="Semîu" type="checkbox" class="chekboxInput">
 <label for="Semîu"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 İşiten</td></tr>
@@ -512,12 +554,12 @@ Es Semîu - 351</strong><input style="display: none" id="Semîu" type="checkbox"
 21/ENBİYA-33</a>: Ve huvellezî halakal leyle ven nehâra veş şemse vel kamer(kamere), kullun fî felekin yesbehûn(yesbehûne).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Fettâh - 1082</strong><input style="display: none" id="Fettâh" type="checkbox">
+El Fettâh - 1082</strong><input style="display: none" id="Fettâh" type="checkbox" class="chekboxInput">
 <label for="Fettâh"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Fetih yaptıran</td></tr>
 <tr><td><strong>
-El Muhyî - 190</strong><input style="display: none" id="Muhyî" type="checkbox">
+El Muhyî - 190</strong><input style="display: none" id="Muhyî" type="checkbox" class="chekboxInput">
 <label for="Muhyî"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hayat veren</td></tr>
@@ -545,17 +587,17 @@ Hayat veren</td></tr>
 33/AHZAB-29</a>: Ve in kuntunne turidnallâhe ve resûlehu veddârel’âhırete fe innallâhe eadde lil muhsinâti minkunne ecren azîmâ(azîmen).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Kayyûm - 444</strong><input style="display: none" id="Kayyûm" type="checkbox">
+El Kayyûm - 444</strong><input style="display: none" id="Kayyûm" type="checkbox" class="chekboxInput">
 <label for="Kayyûm"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Kaim olan</td></tr>
 <tr><td><strong>
-El Muizz - 235</strong><input style="display: none" id="Muizz" type="checkbox">
+El Muizz - 235</strong><input style="display: none" id="Muizz" type="checkbox" class="chekboxInput">
 <label for="Muizz"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 İzzet veren</td></tr>
 <tr><td><strong>
-El Mukaddim - 638</strong><input style="display: none" id="Mukaddim" type="checkbox">
+El Mukaddim - 638</strong><input style="display: none" id="Mukaddim" type="checkbox" class="chekboxInput">
 <label for="Mukaddim"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Öncelik taşıyan, önce olan</td></tr>
@@ -577,12 +619,12 @@ El Mukaddim - 638</strong><input style="display: none" id="Mukaddim" type="check
 7/A’RAF-15</a>: Kâle inneke minel munzarîn(munzarîne).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Hamîd - 283</strong><input style="display: none" id="Hamîd" type="checkbox">
+El Hamîd - 283</strong><input style="display: none" id="Hamîd" type="checkbox" class="chekboxInput">
 <label for="Hamîd"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Kendisine hamdedilen</td></tr>
 <tr><td><strong>
-Eş Şekûr - 813</strong><input style="display: none" id="Şekûr" type="checkbox">
+Eş Şekûr - 813</strong><input style="display: none" id="Şekûr" type="checkbox" class="chekboxInput">
 <label for="Şekûr"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Kendisine şükredilen</td></tr>
@@ -611,7 +653,7 @@ Kendisine şükredilen</td></tr>
 7/A’RAF-15</a>: Kâle inneke minel munzarîn(munzarîne).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Muktedir - 1115</strong><input style="display: none" id="Muktedir" type="checkbox">
+El Muktedir - 1115</strong><input style="display: none" id="Muktedir" type="checkbox" class="chekboxInput">
 <label for="Muktedir"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 İktidar sahibi</td></tr>
@@ -627,17 +669,17 @@ El Muktedir - 1115</strong><input style="display: none" id="Muktedir" type="chec
 5/MAİDE-9</a>: Vaadellâhullezîne âmenû ve amilûs sâlihâti lehum magfiratun ve ecrun azîm(azîmun).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Hakîm - 280</strong><input style="display: none" id="Hakîm" type="checkbox">
+El Hakîm - 280</strong><input style="display: none" id="Hakîm" type="checkbox" class="chekboxInput">
 <label for="Hakîm"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hikmet sahibi</td></tr>
 <tr><td><strong>
-El Gafûr - 1563</strong><input style="display: none" id="Gafûr" type="checkbox">
+El Gafûr - 1563</strong><input style="display: none" id="Gafûr" type="checkbox" class="chekboxInput">
 <label for="Gafûr"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Mağfiret eden</td></tr>
 <tr><td><strong>
-El Kâdir - 745</strong><input style="display: none" id="Kâdir" type="checkbox">
+El Kâdir - 745</strong><input style="display: none" id="Kâdir" type="checkbox" class="chekboxInput">
 <label for="Kâdir"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Herşeye gücü yeten</td></tr>
@@ -665,17 +707,17 @@ Herşeye gücü yeten</td></tr>
 18/KEHF-12</a>:  Summe beasnâhum li na’leme eyyul hızbeyni ahsâ limâ lebisû emedâ(emeden).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-Er Rahmân - 544</strong><input style="display: none" id="Rahmân" type="checkbox">
+Er Rahmân - 544</strong><input style="display: none" id="Rahmân" type="checkbox" class="chekboxInput">
 <label for="Rahmân"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Herkese ihsan sahibi</td></tr>
 <tr><td><strong>
-El Azîm - 1201</strong><input style="display: none" id="Azîm" type="checkbox">
+El Azîm - 1201</strong><input style="display: none" id="Azîm" type="checkbox" class="chekboxInput">
 <label for="Azîm"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Azamet sahibi</td></tr>
 <tr><td><strong>
-Es Samed - 358</strong><input style="display: none" id="Samed" type="checkbox">
+Es Samed - 358</strong><input style="display: none" id="Samed" type="checkbox" class="chekboxInput">
 <label for="Samed"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Dertlere derman</td></tr>
@@ -691,17 +733,17 @@ Dertlere derman</td></tr>
 39/ZUMER-23</a>: Allâhu nezzele ahsenel hadîsi kitâben muteşâbihen mesâniye takşaırru minhu culûdullezîne yahşevne rabbehum, summe telînu culûduhum ve kulûbuhum ilâ zikrillâh(zikrillâhi), zâlike hudallâhi yehdî bihî men yeşâu, ve men yudlilillâhu fe mâ lehu min hâd(hâdin).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-Er Rahîm - 449</strong><input style="display: none" id="Rahîm" type="checkbox">
+Er Rahîm - 449</strong><input style="display: none" id="Rahîm" type="checkbox" class="chekboxInput">
 <label for="Rahîm"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Yola girenlerde tecelli eden</td></tr>
 <tr><td><strong>
-El Halîm -250</strong><input style="display: none" id="Halîm" type="checkbox">
+El Halîm -250</strong><input style="display: none" id="Halîm" type="checkbox" class="chekboxInput">
 <label for="Halîm"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hilm sahibi (yumuşak)</td></tr>
 <tr><td><strong>
-El Ehad - 303</strong><input style="display: none" id="Ehad" type="checkbox">
+El Ehad - 303</strong><input style="display: none" id="Ehad" type="checkbox" class="chekboxInput">
 <label for="Ehad"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Eşi olmayan (tek)</td></tr>
@@ -717,12 +759,12 @@ Eşi olmayan (tek)</td></tr>
 5/MAİDE-28</a>: Lein besadte ileyye yedeke li taktulenî mâ ene bi bâsitın yediye ileyke li aktuleke, innî ehâfullâhe rabbel âlemîn(âlemîne).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Habîr - 954</strong><input style="display: none" id="Habîr" type="checkbox">
+El Habîr - 954</strong><input style="display: none" id="Habîr" type="checkbox" class="chekboxInput">
 <label for="Habîr"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Haberdar olan</td></tr>
 <tr><td><strong>
-El Vâhid - 385</strong><input style="display: none" id="Vâhid" type="checkbox">
+El Vâhid - 385</strong><input style="display: none" id="Vâhid" type="checkbox" class="chekboxInput">
 <label for="Vâhid"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Tek olan</td></tr>
@@ -738,12 +780,12 @@ Tek olan</td></tr>
 2/BAKARA-126</a>: Ve iz kâle ibrâhîmu rabbic’al hâzâ beleden âminen verzuk ehlehu mines semerâti men âmene minhum billâhi vel yevmil âhir(âhiri), kâle ve men kefere fe umettiuhu kalîlen summe adtarruhu ilâ azâbin nâr(nâri), ve bi’sel masîr(masîru).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Muheymin - 303</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Muheymin - 303</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Gözetici</td></tr>
 <tr><td><strong>
-El Latîf - 242</strong><input style="display: none" id="Latîf" type="checkbox">
+El Latîf - 242</strong><input style="display: none" id="Latîf" type="checkbox" class="chekboxInput">
 <label for="Latîf"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hoş, güzel</td></tr>
@@ -765,7 +807,7 @@ Hoş, güzel</td></tr>
 2/BAKARA-126</a>: Ve iz kâle ibrâhîmu rabbic’al hâzâ beleden âminen verzuk ehlehu mines semerâti men âmene minhum billâhi vel yevmil âhir(âhiri), kâle ve men kefere fe umettiuhu kalîlen summe adtarruhu ilâ azâbin nâr(nâri), ve bi’sel masîr(masîru).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Vâlî - 285</strong><input style="display: none" id="Vâlî" type="checkbox">
+El Vâlî - 285</strong><input style="display: none" id="Vâlî" type="checkbox" class="chekboxInput">
 <label for="Vâlî"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 İdare eden</td></tr>
@@ -781,7 +823,7 @@ El Vâlî - 285</strong><input style="display: none" id="Vâlî" type="checkbox"
 41/FUSSİLET-12</a>: Fe kadâhunne seb’a semâvâtin fî yevmeyni ve evhâ fî kulli semâin emrehâ ve zeyyennes semâed dunyâ bi mesâbîha ve hıfzâ(hıfzen), zâlike takdîrul azîzil alîm(alîmi).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Bâtın - 309</strong><input style="display: none" id="Bâtın" type="checkbox">
+El Bâtın - 309</strong><input style="display: none" id="Bâtın" type="checkbox" class="chekboxInput">
 <label for="Bâtın"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Gizli olan</td></tr>
@@ -797,17 +839,17 @@ Gizli olan</td></tr>
 39/ZUMER-17</a>: Vellezînectenebût tâgûte en ya’budûhâ ve enâbû ilâllâhi lehumul buşrâ, fe beşşir ibâd(ibâdi).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-Er Raşîd - 745</strong><input style="display: none" id="Raşîd" type="checkbox">
+Er Raşîd - 745</strong><input style="display: none" id="Raşîd" type="checkbox" class="chekboxInput">
 <label for="Raşîd"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 İrşad sahibi</td></tr>
 <tr><td><strong>
-El Vâris - 974</strong><input style="display: none" id="İrşad" type="checkbox">
+El Vâris - 974</strong><input style="display: none" id="İrşad" type="checkbox" class="chekboxInput">
 <label for="İrşad"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Kâinatın mirasçısı</td></tr>
 <tr><td><strong>
-El Vâsiu - 453</strong><input style="display: none" id="Vâsiu" type="checkbox">
+El Vâsiu - 453</strong><input style="display: none" id="Vâsiu" type="checkbox" class="chekboxInput">
 <label for="Vâsiu"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Geniş olan</td></tr>
@@ -823,12 +865,12 @@ Geniş olan</td></tr>
 <a href='https://www.mihr.com/Kuran/Meal/16/nahl/98' target="_blank">
 16/NAHL-98</a>: Fe izâ kara’tel kur’âne festeız billâhi mineş şeytânir racîm(racîmi).</th></tr>
 <tr><td><strong>
-El Mu’min - 368</strong><input style="display: none" id="Mu’min" type="checkbox">
+El Mu’min - 368</strong><input style="display: none" id="Mu’min" type="checkbox" class="chekboxInput">
 <label for="Mu’min"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Îmânın sahibi</td></tr>
 <tr><td><strong>
-Ez Zâhir - 1367</strong><input style="display: none" id="Zâhir" type="checkbox">
+Ez Zâhir - 1367</strong><input style="display: none" id="Zâhir" type="checkbox" class="chekboxInput">
 <label for="Zâhir"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Görülen, açıkta olan</td></tr>
@@ -844,17 +886,17 @@ Görülen, açıkta olan</td></tr>
 17/İSRA-80</a>: Ve kul rabbi edhılnî mudhale sıdkın ve ahricnî muhrece sıdkın vec’al lî min ledunke sultânen nasîrâ(nasîren).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-Es Selâm - 402</strong><input style="display: none" id="Selâm" type="checkbox">
+Es Selâm - 402</strong><input style="display: none" id="Selâm" type="checkbox" class="chekboxInput">
 <label for="Selâm"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Teslim alan, selâmete erdiren</td></tr>
 <tr><td><strong>
-El Mukît - 752</strong><input style="display: none" id="Mukît" type="checkbox">
+El Mukît - 752</strong><input style="display: none" id="Mukît" type="checkbox" class="chekboxInput">
 <label for="Mukît"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 İkate eden</td></tr>
 <tr><td><strong>
-El Âhir - 1061</strong><input style="display: none" id="Âhir" type="checkbox">
+El Âhir - 1061</strong><input style="display: none" id="Âhir" type="checkbox" class="chekboxInput">
 <label for="Âhir"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Sonraki (sonu olmayan)</td></tr>
@@ -870,7 +912,7 @@ Sonraki (sonu olmayan)</td></tr>
 19/MERYEM-17</a>: Fettehazet min dûnihim hicâben fe erselnâ ileyhâ rûhanâ fe temessele lehâ beşeren seviyyâ(seviyyen).</th></tr>
 <!------------------------------------------------------->
 <tr><td><strong>
-El Kuddûs - 660</strong><input style="display: none" id="Kuddûs" type="checkbox">
+El Kuddûs - 660</strong><input style="display: none" id="Kuddûs" type="checkbox" class="chekboxInput">
 <label for="Kuddûs"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Mukaddes olan</td></tr>
@@ -886,12 +928,12 @@ Mukaddes olan</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 19/MERYEM-<a data-from-md title='https://www.mihr.com/Kuran/Meal/19/meryem/17' href='https://www.mihr.com/Kuran/Meal/19/meryem/17' target="_blank">17</a>: Fettehazet min dûnihim hicâben fe erselnâ ileyhâ rûhanâ fe temessele lehâ beşeren seviyyâ(seviyyen).</th></tr>
 <tr><td><strong>
-El Hafîz - 1440</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Hafîz - 1440</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hıfzeden, saklayan</td></tr>
 <tr><td><strong>
-El Evvel - 356</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Evvel - 356</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Evvelki (başlangıcı olmayan)</td></tr>
@@ -901,17 +943,17 @@ Evvelki (başlangıcı olmayan)</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 21/ENBİYA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/21/enbiya/83' href='https://www.mihr.com/Kuran/Meal/21/enbiya/83' target="_blank">83</a>: Ve eyyûbe iz nâdâ rabbehû ennî messeniyed durru ve ente erhamur râhimîn(râhimîne).</th></tr>
 <tr><td><strong>
-El Melik - 262</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Melik - 262</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hükümran olan</td></tr>
 <tr><td><strong>
-El Kebîr - 385</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Kebîr - 385</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Büyük olan (yüce olan)</td></tr>
 <tr><td><strong>
-El Muahhir - 1782</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Muahhir - 1782</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Tehir eden, geriye alan</td></tr>
@@ -921,17 +963,17 @@ Tehir eden, geriye alan</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 21/ENBİYA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/21/enbiya/89' href='https://www.mihr.com/Kuran/Meal/21/enbiya/89' target="_blank">89</a>: Ve zekeriyyâ iz nâdâ rabbehu rabbi lâ tezernî ferden ve ente hayrul vârisîn(vârisîne).</th></tr>
 <tr><td><strong>
-El Bâriu - 405</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Bâriu - 405</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Uyumla yaratan</td></tr>
 <tr><td><strong>
-El Aliyy - 223</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Aliyy - 223</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Yüksek, yüce olan</td></tr>
 <tr><td><strong>
-Er Rauf - 433</strong><input style="display: none" id="Muheymin" type="checkbox">
+Er Rauf - 433</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Refet (ni’met veren)</td></tr>
@@ -941,17 +983,17 @@ Refet (ni’met veren)</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 21/ENBİYA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/21/enbiya/92' href='https://www.mihr.com/Kuran/Meal/21/enbiya/92' target="_blank">92</a>: İnne hâzihî ummetukum ummeten vâhıdeten ve ene rabbukum fa’budûn(fa’budûni).</th></tr>
 <tr><td><strong>
-El Hâlık - 1112</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Hâlık - 1112</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Halkeden, yaratan</td></tr>
 <tr><td><strong>
-El Kerîm - 472</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Kerîm - 472</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 İkram eden</td></tr>
 <tr><td><strong>
-El Afuvv - 375</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Afuvv - 375</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Affeden</td></tr>
@@ -961,7 +1003,7 @@ Affeden</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 21/ENBİYA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/21/enbiya/107' href='https://www.mihr.com/Kuran/Meal/21/enbiya/107' target="_blank">107</a>: Ve mâ erselnâke illâ rahmeten lil âlemîn(âlemîne).</th></tr>
 <tr><td><strong>
-El Kaviyy - 354</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Kaviyy - 354</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Kuvvetli, sağlam</td></tr>
@@ -977,12 +1019,12 @@ Kuvvetli, sağlam</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 21/ENBİYA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/21/enbiya/112' href='https://www.mihr.com/Kuran/Meal/21/enbiya/112' target="_blank">112</a>: Kâle rabbıhkum bil hakk(hakkı), ve rabbuner rahmânul musteânu alâ mâ tasıfûn(tasıfûne).</th></tr>
 <tr><td><strong>
-El Vekîl - 265</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Vekîl - 265</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Vekil olan</td></tr>
 <tr><td><strong>
-Et Tevvâb - 689</strong><input style="display: none" id="Muheymin" type="checkbox">
+Et Tevvâb - 689</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Tövbeleri kabul eden</td></tr>
@@ -992,17 +1034,17 @@ Tövbeleri kabul eden</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 22/HAC-<a data-from-md title='https://www.mihr.com/Kuran/Meal/22/hacc/68' href='https://www.mihr.com/Kuran/Meal/22/hacc/68' target="_blank">68</a>: Ve in câdelûke fe kulillâhu a’lemu bimâ ta’melûn(ta’melûne).</th></tr>
 <tr><td><strong>
-El Azîz - 157</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Azîz - 157</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Azîz olan, izzet sahibi</td></tr>
 <tr><td><strong>
-El Hakk - 578</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Hakk - 578</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hakkın sahibi</td></tr>
 <tr><td><strong>
-El Berr - 543</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Berr - 543</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Kul lehine davranan</td></tr>
@@ -1012,17 +1054,17 @@ Kul lehine davranan</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/26' href='https://www.mihr.com/Kuran/Meal/23/muminun/26' target="_blank">26</a>: Kâle rabbinsurnî bimâ kezzebûn(kezzebûni).</th></tr>
 <tr><td><strong>
-Er Rezzâk - 657</strong><input style="display: none" id="Muheymin" type="checkbox">
+Er Rezzâk - 657</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Rızık veren, doyuran</td></tr>
 <tr><td><strong>
-Eş Şehîd - 481</strong><input style="display: none" id="Muheymin" type="checkbox">
+Eş Şehîd - 481</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Şahit olan</td></tr>
 <tr><td><strong>
-El Muteâlî - 824</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Muteâlî - 824</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Herşeyden üstün olan</td></tr>
@@ -1032,22 +1074,22 @@ Herşeyden üstün olan</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 39/ZUMER-<a data-from-md title='https://www.mihr.com/Kuran/Meal/39/zumer/19' href='https://www.mihr.com/Kuran/Meal/39/zumer/19' target="_blank">19</a>: E fe men hakka aleyhi kelimetul azâb(azâbi), e fe ente tunkızu men fîn nâr(nâri).</th></tr>
 <tr><td><strong>
-El Âti - 350</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Âti - 350</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Geleceğin sahibi</td></tr>
 <tr><td><strong>
-El Bedîu - 248</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Bedîu - 248</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Açık olan, ayan beyan olan</td></tr>
 <tr><td><strong>
-El Mucîb - 157</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Mucîb - 157</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 İcabet eden</td></tr>
 <tr><td><strong>
-Er Rakîb - 534</strong><input style="display: none" id="Muheymin" type="checkbox">
+Er Rakîb - 534</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hıfzeden, saklayan</td></tr>
@@ -1057,7 +1099,7 @@ Hıfzeden, saklayan</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/29' href='https://www.mihr.com/Kuran/Meal/23/muminun/29' target="_blank">29</a>: Ve kul rabbi enzilnî munzelen mubâreken ve ente hayrul munzilîn(munzilîne).</th></tr>
 <tr><td><strong>
-El Gaffâr - 1683</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Gaffâr - 1683</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Mağfiret eden</td></tr>
@@ -1073,12 +1115,12 @@ Mağfiret eden</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/29' href='https://www.mihr.com/Kuran/Meal/23/muminun/29' target="_blank">29</a>: Ve kul rabbi enzilnî munzelen mubâreken ve ente hayrul munzilîn(munzilîne).</th></tr>
 <tr><td><strong>
-El Bâis - 755</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Bâis - 755</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Beas eden</td></tr>
 <tr><td><strong>
-El Ganî - 1258</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Ganî - 1258</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Müstağni</td></tr>
@@ -1088,17 +1130,17 @@ Müstağni</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/93' href='https://www.mihr.com/Kuran/Meal/23/muminun/93' target="_blank">93</a>: Kul rabbi immâ turiyennî mâ yûadûn(yûadûne).</th></tr>
 <tr><td><strong>
-El Musavvir - 688</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Musavvir - 688</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Tasvir eden</td></tr>
 <tr><td><strong>
-El Mecîd - 253</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Mecîd - 253</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Şanı, gücü olan</td></tr>
 <tr><td><strong>
-El Câmiu - 394</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Câmiu - 394</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Biraraya toplayan</td></tr>
@@ -1108,12 +1150,12 @@ Biraraya toplayan</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/94' href='https://www.mihr.com/Kuran/Meal/23/muminun/94' target="_blank">94</a>: Rabbi fe lâ tec’alnî fîl kavmiz zâlimîn(zâlimîne).</th></tr>
 <tr><td><strong>
-Er Râfiu - 602</strong><input style="display: none" id="Muheymin" type="checkbox">
+Er Râfiu - 602</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Yükselten</td></tr>
 <tr><td><strong>
-El Muîd - 335</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Muîd - 335</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Aslına iade eden</td></tr>
@@ -1123,7 +1165,7 @@ Aslına iade eden</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/97' href='https://www.mihr.com/Kuran/Meal/23/muminun/97' target="_blank">97</a>: Ve kul rabbi eûzu bike min hemezatiş şeyâtîn(şeyâtîni).</th></tr>
 <tr><td><strong>
-El Mubdiu - 208</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Mubdiu - 208</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Başlangıcı olmayan</td></tr>
@@ -1133,17 +1175,17 @@ Başlangıcı olmayan</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/98' href='https://www.mihr.com/Kuran/Meal/23/muminun/98' target="_blank">98</a>: Ve eûzu bike rabbi en yahdurûn(yahdurûni).</th></tr>
 <tr><td><strong>
-El Bâsıt - 323</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Bâsıt - 323</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Bast eden, genişleten</td></tr>
 <tr><td><strong>
-El Muhsî - 354</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Muhsî - 354</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Herşeyin sayısını bilen</td></tr>
 <tr><td><strong>
-Mâlikul Mulk 837</strong><input style="display: none" id="Muheymin" type="checkbox">
+Mâlikul Mulk 837</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Mülkün sahibi</td></tr>
@@ -1159,12 +1201,12 @@ Mülkün sahibi</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 23/MU’MİNUN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/23/muminun/118' href='https://www.mihr.com/Kuran/Meal/23/muminun/118' target="_blank">118</a>: Ve kul rabbigfir verham ve ente hayrur râhımîn(râhımîne).</th></tr>
 <tr><td><strong>
-El Velî - 175</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Velî - 175</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Yardımcı, dost</td></tr>
 <tr><td><strong>
-El Hâdî - 242</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Hâdî - 242</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hidayete erdiren</td></tr>
@@ -1174,17 +1216,17 @@ Hidayete erdiren</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 25/FURKAN-<a data-from-md title='https://www.mihr.com/Kuran/Meal/25/furkan/6' href='https://www.mihr.com/Kuran/Meal/25/furkan/6' target="_blank">6</a>: Kul enzelehullezî ya’lemus sırre fîs semâvâti vel ard(ardı), innehu kâne gafûran rahîmâ(rahîmen).</th></tr>
 <tr><td><strong>
-El Alîm - 302</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Alîm - 302</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Bilen</td></tr>
 <tr><td><strong>
-El Metîn - 608</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Metîn - 608</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Dayanıklı olan</td></tr>
 <tr><td><strong>
-En Nûr - 458</strong><input style="display: none" id="Muheymin" type="checkbox">
+En Nûr - 458</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Nur olan</td></tr>
@@ -1194,17 +1236,17 @@ Nur olan</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 26/ŞUARA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/26/suara/62' href='https://www.mihr.com/Kuran/Meal/26/suara/62' target="_blank">62</a>: Kâle kellâ, inne maiye rabbî seyehdîn(seyehdîni).</th></tr>
 <tr><td><strong>
-El Adl - 305</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Adl - 305</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Adaletle hükmeden</td></tr>
 <tr><td><strong>
-El Mâcid - 368</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Mâcid - 368</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Şan ve şeref sahibi</td></tr>
 <tr><td><strong>
-En Nâfiu - 438</strong><input style="display: none" id="Muheymin" type="checkbox">
+En Nâfiu - 438</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Fayda sağlayan</td></tr>
@@ -1214,17 +1256,17 @@ Fayda sağlayan</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 26/ŞUARA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/26/suara/83' href='https://www.mihr.com/Kuran/Meal/26/suara/83' target="_blank">83</a>: Rabbi heb lî hukmen ve elhıknî bis sâlihîn(sâlihîne).</th></tr>
 <tr><td><strong>
-El Hakem - 269</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Hakem - 269</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Hükmeden</td></tr>
 <tr><td><strong>
-El Vâcid - 360</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Vâcid - 360</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 İstediği an bulan</td></tr>
 <tr><td><strong>
-Ed Dârr - 1535</strong><input style="display: none" id="Muheymin" type="checkbox">
+Ed Dârr - 1535</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Yurt</td></tr>
@@ -1234,12 +1276,12 @@ Yurt</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 26/ŞUARA-<a data-from-md title='https://www.mihr.com/Kuran/Meal/26/suara/85' href='https://www.mihr.com/Kuran/Meal/26/suara/85' target="_blank">85</a>: Vec’alnî min vereseti cennetin naîm(naîmi).</th></tr>
 <tr><td><strong>
-El Basîr - 448</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Basîr - 448</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Gören</td></tr>
 <tr><td><strong>
-El Hayy - 100</strong><input style="display: none" id="Muheymin" type="checkbox">
+El Hayy - 100</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Sonsuz hayatta olan</td></tr>
@@ -1249,7 +1291,7 @@ Sonsuz hayatta olan</td></tr>
 <tr><th class="block_with_text" style="display:none;">
 Bu esma için ayet yok</th></tr>
 <tr><td><strong>
-Eş Şafi - 884</strong><input style="display: none" id="Muheymin" type="checkbox">
+Eş Şafi - 884</strong><input style="display: none" id="Muheymin" type="checkbox" class="chekboxInput">
 <label for="Muheymin"></label></td></tr>
 <tr><td class="block_with_text" style="display:none;">
 Şifa veren</td></tr>
