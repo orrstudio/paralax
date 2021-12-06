@@ -1,22 +1,22 @@
 /* Задаем параметры цветов темной и светлой темы (Светлая тема) */
 html {
   font-family: Roboto, sans-serif;
-  --primary-color: #1b8d2a;
-  --secondary-color: #333333;
-  --bg-color: rgb(240,240,240);
+  --primary-color: DarkGrey;
+  --secondary-color: grey;
+  --bg-color: Black;
 }
 /* Задаем параметры цветов темной и светлой темы (Темная тема) */
 html[data-theme='dark'] {
-  --primary-color: #1b8d2a;
-  --secondary-color: rgb(240,240,240);
-  --bg-color: #333333;
+  --primary-color: DarkGrey;
+  --secondary-color: Black;
+  --bg-color: grey;
    color: var(--secondary-color);
 }
 
 
 /* Задаем фоновый цвет меню */
 .topnav {
-    background-color: #1b8d2a;
+    background-color: Aqua;
     overflow: hidden;
 }
 
@@ -24,7 +24,7 @@ html[data-theme='dark'] {
 .topnav a {
     float: left;
     display: block;
-    color: rgb(255, 255, 255);
+    color: White;
     text-align: center;
     padding: 8px 10px;
     /* text-transform:uppercase; */
@@ -34,20 +34,20 @@ html[data-theme='dark'] {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #1b8d2a;
-    color: white;
+    background-color: Aqua;
+    color: black;
 }
 
 /* Add an active class to highlight the current page */
 .active {
-    background-color: #1b8d2a;
-    color: white;
+    background-color: Aqua;
+    color: Black;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
     display: none;
-    color: white;
+    color: Black;
 }
 
 /* Если ширина экрана меньше 600 пикселей, скрыть все ссылки, 
@@ -58,7 +58,7 @@ html[data-theme='dark'] {
   .topnav a.icon {
     float: left;
     display: block;
-    color: white;
+    color: Black;
   }
 }
 /* Класс «responsive» добавляется в topnav с помощью JavaScript, 
