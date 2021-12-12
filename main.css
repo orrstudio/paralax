@@ -26,11 +26,11 @@
     color: #80868D;
 }
 
-/* Add an active class to highlight the current page 
+/* Add an active class to highlight the current page */
 .active {
     background-color: #214B86;
-    color: Black;
-}*/
+    color: #F0F6FC;
+}
 
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
