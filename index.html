@@ -11,17 +11,17 @@
 </head>
 
 <body>
-        <!-- Ссылка с классом = "Icon" используется для открытия и закрытия topnav на маленьких экранах. -->
-        <div class="topnav" id="myTopnav">
-            <a href="#home" class="active">Home</a>
-            <a href="#news">Projects</a>
-            <a href="https://esmalar.ml" target="_blank">Esmaül Hüsna</a>
-            <a href="https://orr888.github.io/my-cv/" target="_blank">CV</a>
-            <a href="#about">About</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i></a>
-        </div>
-        
+    <!-- Ссылка с классом = "Icon" используется для открытия и закрытия topnav на маленьких экранах. -->
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">Projects</a>
+        <a href="https://esmalar.ml" target="_blank">Esmaül Hüsna</a>
+        <a href="https://orr888.github.io/my-cv/" target="_blank">CV</a>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+    </div>
+
     <section><span>Scroll Down </span></section>
     <section class="fixed one"></section>
     <section><span> Keep Scrolling Down</span> </section>
@@ -33,16 +33,15 @@
     <!-- Кнопка быстрого перехода вверх -->
     <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
     <script>
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        }
-
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () { scrollFunction() };
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById('myBtn').style.display = 'block';
+            } else {
+                document.getElementById('myBtn').style.display = 'none';
+            }
+        }
 
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
