@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <!-- Ссылка с классом = "Icon" используется для открытия и закрытия topnav на маленьких экранах. -->
     <div class="topnav" id="myTopnav">
         <a href="#home" class="active">Home</a>
@@ -21,7 +22,8 @@
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i></a>
     </div>
-
+       <!-- Кнопка быстрого перехода вверх -->
+       <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
     <section><span>Scroll Down </span></section>
     <section class="fixed one"></section>
     <section><span> Keep Scrolling Down</span> </section>
@@ -30,8 +32,7 @@
     <section class="fixed three"></section>
     <section><span>The End </span></section>
 
-    <!-- Кнопка быстрого перехода вверх -->
-    <button onclick="topFunction()" id="myBtn" title="Go to top">▲</button>
+ 
     <script>
         // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function () { scrollFunction() };

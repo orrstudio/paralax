@@ -4,11 +4,10 @@ body {
   color: #C9D1D9;
   margin: 10px;
 }
-myBtn {
-display: inline-block;
-position: fixed;
-bottom: 25px;
-left: 50px;
+.myBtn {
+  position: fixed; /* Фиксированное положение */
+  right: 10%; /* Расстояние от правого края окна браузера */
+  top: 90%; /* Расстояние сверху */
 z-index: 1000;
 }
 section {
