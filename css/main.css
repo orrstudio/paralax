@@ -1,22 +1,22 @@
 /* Задаем параметры цветов темной и светлой темы (Светлая тема) */
 html {
   font-family: Roboto, sans-serif;
-  --primary-color: DarkGrey;
-  --secondary-color: grey;
-  --bg-color: Black;
+  --primary-color: #8B949E;
+  --secondary-color: #C9D1D9;
+  --bg-color: #0D1117;
 }
 /* Задаем параметры цветов темной и светлой темы (Темная тема) */
 html[data-theme='dark'] {
-  --primary-color: DarkGrey;
-  --secondary-color: Black;
-  --bg-color: grey;
+  --primary-color: #8B949E;
+  --secondary-color: #0D1117;
+  --bg-color: #8B949E;
    color: var(--secondary-color);
 }
 
 
 /* Задаем фоновый цвет меню */
 .topnav {
-    background-color: Aqua;
+    background-color: 56A4FC;
     overflow: hidden;
 }
 
@@ -34,13 +34,13 @@ html[data-theme='dark'] {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: Aqua;
+    background-color: 56A4FC;
     color: black;
 }
 
 /* Add an active class to highlight the current page */
 .active {
-    background-color: Aqua;
+    background-color: 56A4FC;
     color: Black;
 }
 
@@ -194,7 +194,7 @@ html.transition * {
 }
 
 #myBtn:hover {
-    background-color: #1b8d2a; /* Add a dark-grey background on hover */
+    background-color: #1b8d2a; /* Add a dark-#8B949E background on hover */
 }
 
 section {
