@@ -1,16 +1,18 @@
-### Hi there 👋
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+h1 { font-family: 'Tourney'; text-shadow: 3px 3px 8px #C9D1D9; padding: 15px; font-size: 400%; color: #C9D1D9; background: #12261D ;}
+h2 { font-family: 'Oswald'; font-size: 300% color: #58A6FF; background: #0D1117; padding: 15px; border: #1C562B; }
 
+body{ font-family: 'Oswald'; background: #0D1117 ;font-size:100%; color:#C9D1D9; font-weight: bold }
+a:link { background:; color: #C9D1D9; /* Цвет ссылок */
+    padding: 5px; /* Поля вокруг текста */ }
+a:hover { background: #C9D1D9; /* Цвет фона под ссылкой */ 
+    color: #C9D1D9; /* Цвет ссылки */ } 
+</style>
 
-**Orr888/Orr888** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+# Hi there 👋
 
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
-
+## 🔭 I’m currently working on Web Pages in 3 Projects
+## 🌱 I’m currently learning HTML, CSS, JavaScript and more more more...
+## ⚡ Fun fact: Life is Buitifull. 😄
