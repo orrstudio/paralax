@@ -5,6 +5,7 @@ body {
   margin: 10px;
 }
 
+
 /* NAVBAR  STYLE */
 
 .navbar {
@@ -31,7 +32,7 @@ body {
 }
 
 a {
-  color: #1676d6;
+  color: #C9D1D9;
   font-weight: bold;
   text-decoration: none;
 }
