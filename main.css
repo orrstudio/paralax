@@ -5,6 +5,42 @@ body {
   margin: 10px;
 }
 
+/* NAVBAR  STYLE */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: #0D1117;
+  font-weight: normal;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-size: 120%;
+  margin: auto;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+a {
+  color: #1676d6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 .myBtnScrol {
   background-color: transparent;
   color: #C9D1D9;
@@ -26,10 +62,10 @@ background-attachment: fixed;
 }
 
 section.one {
-background-image: url('https://active-vision.ru/wa-data/public/blog/img/p17-1.jpg');
+background-image: url('ORR_Desktop_WallPaper.jpg');
 }
 section.two {
-background-image: url('https://s-sd.ru/files/imfges-pol/files/imagine.jpg');
+background-image: url('https://active-vision.ru/wa-data/public/blog/img/p17-1.jpg');
 }
 section.three {
 background-image: url('https://s-sd.ru/images/cms/data/misty-woods.jpg');
