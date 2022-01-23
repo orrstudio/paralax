@@ -215,11 +215,12 @@ body {
   top: 15%;
   left: 2.5%;
   opacity: 0.8;
-  transition: all 0.4s ease;
+  transition: all 3s ease;
 }
 #navigation-bar img:hover {
   opacity: 1;
-  transform: rotate(-45deg);
+  transform: rotateY(6rad);
+  /* transform: rotate(-360deg); */
 }
 .header-image img {
   height: 100vh;
@@ -265,8 +266,9 @@ body {
 .header-content .secondline {
   z-index: 2;
   font-size: 30px;
+  font-weight: bold;
   padding-top: 20px;
-  font-weight: 500;
+
   color: rgb(255, 255, 255, 0.8);
 }
 .slash {
@@ -536,7 +538,7 @@ body {
   color: whitesmoke;
   background: #ff0000;
   outline: none;
-  font-size: 20px;
+  font-size: 40px;
   font-family: aileron;
   border-radius: 4px;
   font-weight: 400;
@@ -1086,6 +1088,7 @@ button:hover .index {
   width: 40%;
   height: 500px;
   background: url(../images/contact-back.jpg);
+  background-color: grey;
   background-position: center;
   background-size: cover;
   border-radius: 16px;
