@@ -549,6 +549,7 @@ body {
 .cv a button:hover {
   opacity: 1;
   transform: scale(1.05);
+  background: #ff0000;
 }
 #services {
   position: relative;
@@ -714,7 +715,7 @@ body {
   font-family: poppins;
   justify-content: center;
   transition: all 0.4s ease;
-  width: 90%;
+  width: 80%;
   border-radius: 10px;
   background: #ff0000;
 }
@@ -727,7 +728,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
-  width: 83%;
+  width: 98%;
   border-radius: 10px;
   background: #ff0000;
 }
@@ -739,7 +740,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 85%;
+  width: 37%;
   border-radius: 10px;
   background: #ff0000;
   transition: all 0.4s ease;
@@ -753,7 +754,7 @@ body {
   align-items: center;
   justify-content: center;
   transition: all 0.4s ease;
-  width: 94%;
+  width: 34%;
   border-radius: 10px;
   background: #ff0000;
 }
@@ -765,7 +766,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 84%;
+  width: 95%;
   border-radius: 10px;
   transition: all 0.4s ease;
   background: #ff0000;
@@ -2325,7 +2326,7 @@ for tabs and large phones
     font-weight: 200;
   }
   .cv a button {
-    background: transparent;
+    background: #ff0000;
     border: none;
     padding: 25px 35px;
     color: whitesmoke;

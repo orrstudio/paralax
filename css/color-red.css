@@ -6,73 +6,73 @@
 * Author   : sujal
 * 
 ------------------*/
-::-webkit-scrollbar{
-    width: 4px;
-    color:#c70000;
+::-webkit-scrollbar {
+  width: 4px;
+  color: #c70000;
 }
 ::-webkit-scrollbar-thumb {
-    background: #c70039; 
-    border-radius: 4px;
-    width: 4px;
+  background: #ff0000;
+  border-radius: 4px;
+  width: 4px;
+}
+#breaker {
+  background-color: #ff0000;
+}
+.color {
+  color: #ff0000;
+}
+#about-content a {
+  color: #ff0000;
+}
+.cv a button {
+  background: #ff0000;
+}
+.service-img img {
+  background: #ff0000;
+  box-shadow: 0px 0px 0px 0px #ff0000;
+}
+.service:hover .service-img img {
+  box-shadow: 0px 0px 0px 400px #ff0000;
+}
+.html-progress {
+  background: #ff0000;
+}
+.js-progress {
+  background: #ff0000;
+}
+.adobe-progress {
+  background: #ff0000;
+}
+.php-progress {
+  background: #ff0000;
+}
+.jquery-progress {
+  background: #ff0000;
+}
+.seo-progress {
+  background: #ff0000;
+}
+.portfolio-text h2 {
+  color: #ff0000;
+}
+.portfolio-text button {
+  color: #ff0000;
+  border: 1.5px solid #ff0000;
+}
+.portfolio-text button::before {
+  background: #ff0000;
+}
+.portfolio-image img::before {
+  background: #ff0000;
+}
+.blog-date {
+  background: #ff0000;
+}
+form button {
+  background: #ff0000;
+}
+@media all and (max-width: 550px) and (min-width: 5px) {
+  .service:hover .service-img img {
+    box-shadow: 0px 0px 0px 0px #ff0000;
   }
-  #breaker{
-      background-color: #c70039;
-  }
-  .color{
-      color: #c70039;
-  }
-  #about-content a{
-      color:#c70039 ;
-  }
-  .cv a button{
-      background: #c70039;
-  }
-  .service-img img{
-    background: #c70039;
-    box-shadow:0px 0px 0px 0px #c70039 ;
-  }
-  .service:hover .service-img img{
-    box-shadow:0px 0px 0px 400px #c70039 ;
-}
-.html-progress{
-    background: #c70039;
-}
-.js-progress{
-    background: #c70039;
-}
-.adobe-progress{
-    background: #c70039;
-}
-.php-progress{
-    background: #c70039;
-}
-.jquery-progress{
-    background: #c70039;
-}
-.seo-progress{
-    background: #c70039;
-}
-.portfolio-text h2{
-    color: #c70039;
-}
-.portfolio-text button{
-    color: #c70039;
-    border: 1.5px solid #c70039;
-}
-.portfolio-text button::before{
-    background: #c70039;
-}
-.portfolio-image img::before{
-    background: #c70039;
-}
-.blog-date{
-    background: #c70039;
-}
-form button{
-    background: #c70039;
-}
-@media all and (max-width: 550px) and (min-width: 5px){
-    .service:hover .service-img img{
-        box-shadow:0px 0px 0px 0px #c70039 ;
-    }
 }
